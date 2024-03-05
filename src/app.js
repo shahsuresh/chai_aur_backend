@@ -28,5 +28,17 @@ app.use(express.static("public")); // "public" is a name of folder
 //?=======app to read,access and use cookies=======
 
 app.use(cookieParser());
+
+//?===============import routes=============
+
+import userRouter from "./routes/user.routes.js";
+
+// routes declaration
+
+app.use("/app/v1/users", userRouter);
+
+//example url
+//http://localhost:8000/app/v1/users/register
+
 //?========export app==========
 export default app;
