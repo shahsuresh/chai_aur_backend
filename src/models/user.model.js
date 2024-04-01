@@ -33,7 +33,7 @@ const userSchema = new mongoose.Schema(
     watchHistory: [
       {
         type: mongoose.Schema.ObjectId,
-        ref: "Video",
+        ref: "videos",
       },
     ],
     password: {
@@ -75,6 +75,7 @@ userSchema.methods.generateAccessToken = function () {
     { expiresIn: process.env.ACCESS_TOKEN_EXPIRY }
   );
 };
+//jwt.sign({payload}, signature,{expiry time})
 userSchema.methods.generateRefreshToken = function () {
   return jwt.sign(
     {

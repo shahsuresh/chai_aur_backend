@@ -4,7 +4,7 @@ import connectDB from "./db/connectDB.js";
 import app from "./app.js";
 //set path for .env to root
 
-dotenv.config({ path: "./env" });
+dotenv.config({ path: "./.env" });
 
 //?=====DATABASE CONNECTION=========
 

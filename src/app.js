@@ -29,7 +29,9 @@ app.use(express.static("public")); // "public" is a name of folder
 
 app.use(cookieParser());
 
-//?===============import routes=============
+//?===============import and register routes=============
+
+// importing user routes
 
 import userRouter from "./routes/user.routes.js";
 
