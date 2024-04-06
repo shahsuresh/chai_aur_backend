@@ -52,7 +52,7 @@ router.route("/change-password").put(verifyJWT, changeCurrentPassword);
 router.route("/profile").get(verifyJWT, getCurrentUser);
 
 //?========update account details=====================
-router.route("/update-account-details").patch(verifyJWT, updateAccountDetails);
+router.route("/update-name-email").patch(verifyJWT, updateAccountDetails);
 
 //?==========update avatar image================
 router
@@ -62,7 +62,7 @@ router
 //?=========update cover Image============
 router
   .route("/update-coverimage")
-  .patch(verifyJWT, upload.single("/coverImage"), updateUserCoverImage);
+  .patch(verifyJWT, upload.single("coverImage"), updateUserCoverImage);
 
 //?========== channel Profile============
 router.route("/c/:username").get(verifyJWT, getUserChannelProfile);
